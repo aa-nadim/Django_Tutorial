@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+              background-color: lightblue;
+        }
+    </style>
+    <title>Python</title>
+</head>
+<body>
+<h1>Example 8.1</h1>
+{% if nm and st %}
+    <h2>{{st}} seats are available for {{nm}} course</h2>
+{% endif %}
+
+<h1>Example 8.2</h1>
+{% if nm or st %}
+    <h2>{{st}} seats are available for {{nm}} course</h2>
+{% endif %}
+
+<h1>Example 8.3</h1>
+{% if not st %}
+    <h2>seats not available</h2>
+{% endif %}
+
+<h1>Example 8.4</h1>
+{% if nm == 'Django' %}
+    <h2>Hello {{nm}}</h2>
+{% endif %}
+
+<h1>Example 8.5</h1>
+{% if nm == 'Django' and st == 5 %}
+    <h2>{{st}} seats are available for {{nm}} course</h2>
+{% endif %}
+
+<h1>Example 8.6</h1>
+{% if nm == 'Django' or st == 5 %}
+    <h2>{{st}} seats are available for {{nm}} course</h2>
+{% endif %}
+
+{% if nm|length >= 4 %}
+    <h2>Hello {{nm}}</h2>
+{% endif %}
+
+{% if nm == 'tjango' %}
+    <h2>Hello {{nm}}</h2>
+{% else %}
+    <h2>No Course Available</h2>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,td{
+        border:1px black solid;
+        }
+    </style>
+</head>
+<body>
+<h1>Customers Page</h1>
+
+
+{% if cus %}
+    <h1>Show Data</h1>
+    <h3>{{cus}}</h3>
+    <table>
+        <tr>
+            <th>CustomerID</th>
+            <th>CustomerName</th>
+            <th>ContactName</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>PostalCode</th>
+            <th>Country</th>
+        </tr>
+        {% for cu in cus %}
+            <tr>
+                <td>{{cu.id}}</td>
+                <td>{{cu.name}}</td>
+                <td>{{cu.contact}}</td>
+                <td>{{cu.address}}</td>
+                <td>{{cu.city}}</td>
+                <td>{{cu.post}}</td>
+                <td>{{cu.country}}</td>
+            </tr>
+
+        {% endfor %}
+    </table>
+{% else %}
+    <h1>No Data</h1>
+{% endif %}
+
+
+</body>
+</html>
